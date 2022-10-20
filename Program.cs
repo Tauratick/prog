@@ -4,11 +4,11 @@
 // 456 -> 5
 // 782 -> 8
 // 918 -> 1
-Console.WriteLine("введите число");
+Console.WriteLine("введите число трехзначное");
 int number=Convert.ToInt32(Console.ReadLine());
 
 int number1=(number%100)/10;
-Console.WriteLine("вторая цифра " +number1);
+Console.WriteLine("вторая цифра трехзначного числа" +number1);
 
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, 
@@ -18,7 +18,7 @@ Console.WriteLine("вторая цифра " +number1);
 // 7 -> да
 // 1 -> нет
 
-Console.WriteLine("введите число");
+Console.WriteLine("введите число от 1 до 7");
 int number =Convert.ToInt32(Console.ReadLine());
 
 if(number>= 1 && number <= 7)
