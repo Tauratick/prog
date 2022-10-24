@@ -1,33 +1,66 @@
-﻿// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и 
-// на выходе показывает вторую цифру этого числа.
-
-// 456 -> 5
-// 782 -> 8
-// 918 -> 1
-Console.WriteLine("введите число трехзначное");
-int number=Convert.ToInt32(Console.ReadLine());
-
-int number1=(number%100)/10;
-Console.WriteLine("вторая цифра трехзначного числа" +number1);
+// Задача 19
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// 14212 -> нет
+// 12821 -> да
+// 23432 -> да
 
 
-// Задача 15: Напишите программу, которая принимает на вход цифру, 
-// обозначающую день недели, и проверяет, является ли этот день выходным.
+Console.WriteLine("Введите число ");
+string num = Console.ReadLine();
+int ff = num.Length;
+if(ff==5)
 
-// 6 -> да
-// 7 -> да
-// 1 -> нет
-
-Console.WriteLine("введите число от 1 до 7");
-int number =Convert.ToInt32(Console.ReadLine());
-
-if(number>= 1 && number <= 7)
-
-if(number == 7) 
+if (num[0] == num[4] && num[1] == num[3])
 {
-    Console.WriteLine("выходной");
+ Console.WriteLine("Палиндром "+num);
 }
 else
 {
-    Console.WriteLine("Рабочие дни");
+    Console.WriteLine("не палиндром ");
 }
+
+
+// Задача 21
+// Напишите программу, которая принимает на вход координаты двух 
+// точек и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+Console.WriteLine("ведите число");
+int X = int.Parse(Console.ReadLine());
+
+Console.WriteLine("ведите число");
+int Y = int.Parse(Console.ReadLine());
+
+Console.WriteLine("ведите число");
+int Z = int.Parse(Console.ReadLine());
+
+Console.WriteLine("ведите число");
+int X1 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("ведите число");
+int Y1 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("ведите число");
+int Z1 = int.Parse(Console.ReadLine());
+
+double lenght=Math.Sqrt(Math.Pow(X1-X,2)+Math.Pow(Y1-Y,2)+Math.Pow(Z1-Z,2));
+Console.WriteLine("Длина от точки до точки "+lenght);
+
+
+// Задача 23
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт 
+// таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+Console.WriteLine("введите число");
+int num=int.Parse(Console.ReadLine());
+
+for(int I=1; I<=num; I++)
+{
+Console.WriteLine(Math.Pow(I,3));
+}
+Console.WriteLine("ступеней в таблице - " +num);
